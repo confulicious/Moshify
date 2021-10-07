@@ -789,6 +789,37 @@ a {
 }
 
 /* Features Block */
+.block-features {
+  margin: 12rem 0;
+}
+
+.block-features__heading {
+  margin: 0 0;
+}
+
 .block-features__header {
   text-align: center;
+}
+
+.block-features__text {
+  margin: 1rem 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block-features__body:nth-of-type(even) .block-features__text {
+    order: 2;
+  }
+
+  .block-features__body {
+    margin: 4rem 0;
+  }
+
+  .block-features__text {
+    align-self: center;
+    justify-self: center;
+  }
+  .block-features__image {
+    align-self: center;
+    width: 100%;
+  }
 }
