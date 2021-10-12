@@ -211,7 +211,7 @@ a {
   letter-spacing: 0.2rem;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -305,6 +305,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 2rem;
+  width: 0;
 }
 
 .input-group .button {
@@ -645,7 +646,7 @@ a {
 }
 
 .block--skewed-left {
-  padding-bottom: var(--padding-vertical + 4rem);
+  padding-bottom: var(--padding-vertical);
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 100%);
 }
 
@@ -754,14 +755,15 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 6rem);
   justify-items: center;
-  max-width: 700px;
   margin: 0 auto;
+  max-width: 700px;
 }
 
 @media screen and (min-width: 768px) {
@@ -851,5 +853,79 @@ a {
   .block-showcase__image > img {
     width: auto;
     max-width: 700px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #232323;
+}
+
+.footer a {
+  color: #777;
+  opacity: 50%;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__list-item {
+  margin-bottom: 2rem;
+}
+
+.footer__section {
+  padding: 3rem;
+  border-bottom: 3px solid #4a4a4a;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__logo {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 2.1rem;
+  opacity: 50%;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .footer .collapsible__chevron {
+    visibility: hidden;
+  }
+
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__logo {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__logo img {
+    width: 100%;
+  }
+  .copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__sections {
+    border: none;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
   }
 }
