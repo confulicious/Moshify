@@ -789,12 +789,13 @@ a {
 }
 
 /* Features Block */
-.block-features {
+.block-features .grid {
+  gap: 4rem 2rem;
   margin: 12rem 0;
 }
 
-.block-features__heading {
-  margin: 0 0;
+.block-features:first-of-type {
+  margin-top: 6rem;
 }
 
 .block-features__header {
@@ -819,7 +820,11 @@ a {
     justify-self: center;
   }
   .block-features__image {
-    align-self: center;
     width: 100%;
   }
+}
+
+/* Showcase Block */
+
+.block-showcase__image {
 }
